@@ -1,0 +1,28 @@
+{
+  "name": "@nexus/integration-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --no-cache",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexus/shared": "workspace:*",
+    "@nexus/graph": "workspace:*",
+    "@nexus/search": "workspace:*",
+    "@nexus/crdt": "workspace:*",
+    "@nexus/analytics": "workspace:*",
+    "@nexus/nlp": "workspace:*",
+    "@nexus/workflow": "workspace:*",
+    "@nexus/permissions": "workspace:*",
+    "@nexus/queue": "workspace:*",
+    "@nexus/events": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "vitest": "^2.1.0"
+  }
+}

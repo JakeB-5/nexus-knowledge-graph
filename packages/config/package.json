@@ -1,0 +1,11 @@
+{
+  "name": "@nexus/config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./typescript": "./tsconfig.json",
+    "./eslint": "./eslint.config.js",
+    "./vitest": "./vitest.config.ts"
+  }
+}

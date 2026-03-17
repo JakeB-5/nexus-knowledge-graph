@@ -1,0 +1,33 @@
+{
+  "name": "@nexus/graphql",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "test": "vitest run --no-cache",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nexus/shared": "workspace:*",
+    "@nexus/db": "workspace:*",
+    "@nexus/graph": "workspace:*",
+    "graphql": "^16.9.0",
+    "@graphql-tools/schema": "^10.0.0",
+    "dataloader": "^2.2.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "vitest": "^2.1.0"
+  }
+}
